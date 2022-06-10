@@ -1,5 +1,5 @@
-import './App.css';
-import Call from './Calls/Call';
+import '../App.css';
+import Call from './Call';
 
 function App() {
   return (
