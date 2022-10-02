@@ -1,6 +1,8 @@
 @import "index";
 
 .caller-container {
+  height: 100%;
+  overflow-x: scroll;
   background-color: black;
   box-sizing: border-box;
   display: flex;
@@ -8,7 +10,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
 
   .caller__1, .caller__2, .caller__3, .caller__4 {
     display: flex;
@@ -20,7 +21,7 @@
     p, form {
       text-align: center;
     }
-    .caller-input {
+    .caller-input, .show-alert {
       border-radius: 15px;
       background-color: lightgray;
       font-size: 15px;
