@@ -25,13 +25,20 @@ const CallerContainer = (props) => {
               <input 
                 type="text" 
                 className={
-                  callerId && value.incomingCall ? 'caller-input incoming' 
+                  callerId && !showAlert && value.incomingCall ? 'caller-input incoming' 
                   : 
-                  callerId && value.outgoingCall ? 'caller-input outgoing' 
-                  : 'caller-input'
+                  callerId && !showAlert && value.outgoingCall ? 'caller-input outgoing' 
+                  : 
+                  callerId && showAlert && callerId === value.id - 1 ? 'caller-input show-alert'
+                  : 
+                  'caller-input'
                 }
                 name={`caller__${i+1}`} 
-                defaultValue={calling && value.incomingCall && !showAlert ? `Incoming Call from ${callerId}` : calling && value.outgoingCall && !showAlert? `Outgoing Call to ${numberToCall}` : value.value} 
+                defaultValue={
+                  calling && value.incomingCall && !showAlert ? `Incoming Call from ${callerId}` 
+                  : calling && value.outgoingCall && !showAlert? `Outgoing Call to ${numberToCall}` 
+                  : value.value
+                } 
               />
             </form>
             <div className='number-buttons-container'>
