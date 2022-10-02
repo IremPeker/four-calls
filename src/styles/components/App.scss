@@ -1,13 +1,14 @@
 @import "index";
 
 .caller-container {
+  background-color: black;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 
   .caller__1, .caller__2, .caller__3, .caller__4 {
     display: flex;
@@ -16,45 +17,61 @@
     border: 1px solid black;
     border-radius: 20px;
     margin: 5px;
+    p, form {
+      text-align: center;
+    }
+    .caller-input {
+      border-radius: 15px;
+      background-color: lightgray;
+      font-size: 15px;
+    }
+
+    .outgoing {
+      background-color: rgb(137, 210, 137);
+      font-size: 17px;
+    }
+  
+    .incoming {
+      background-color: rgb(213, 157, 157);
+      font-size: 17px;
+    }
   }
 
-  .caller__1 {
-    background-color: lightcoral;
-  }
-
-  .caller__2 {
+  .caller__1, .caller__2, .caller__3, .caller__4 {
     background-color: lightgray;
   }
-
-  .caller__3 {
-    background-color: lightpink;
-  }
-
-  .caller__4 {
-    background-color: lightskyblue;
-  }
   
-  .dial-buttons-container {
+  .number-buttons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 300px;
     margin: 20px;
 
-    .dial-buttons {
+    .number-buttons {
       @include circle-button-props();
     }
   }
   
   .call-button {
-    //@include circle-button-props();
     align-self: center;
+    border: none;
+    border-radius: 50%;
+    background-color: lightgray;
     img {
       width: 80px;
       height: 80px;
       border-radius: 40px;
       cursor: pointer;
     }
+  }
+
+  .green {
+    background-color: rgb(137, 210, 137);
+  }
+
+  .red {
+    background-color: rgb(213, 157, 157);
   }
   
   input {

@@ -1,3 +1,8 @@
+body, #root, .App {
+  height: 100vh;
+  overflow: hidden;
+}
+
 @mixin circle-button-props {
   height: 80px;
   line-height: 80px;  
@@ -5,7 +10,7 @@
   font-size: 2em;
   font-weight: bold;
   border-radius: 50%;
-  background-color: #4CAF50;
+  background-color: lightslategrey;
   color: white;
   text-align: center;
   cursor: pointer;
